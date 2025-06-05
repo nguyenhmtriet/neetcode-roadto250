@@ -1,5 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+var isAnagram = IsAnagram("racecar", "carrace");
+// var isAnagram = IsAnagram("ab", "ba");
+
+Console.WriteLine(isAnagram ? "true" : "false");
+
+return;
+
 bool IsAnagram(string s, string t) {
     var head = 0;
     
@@ -7,46 +14,27 @@ bool IsAnagram(string s, string t) {
         return false;
     }
 
-    var group = new List<string>(s.Length);
-    var length = s.Length;
-    var count = 0;
-
-    while (head <= length - 1) {
-        var cur = 0;
-        var origin = head;
- 
-        while (cur <= length - 1) {
-            if (s[head] == t[cur]) {
-                cur++;
-                head++;
-                count++;
-                continue;
-            }
-
-            if (count >= 3)
-            {
-                group.AddRange(s[origin..head].ToString());
-            }
-
-            head = origin;
-            if (count == 0) cur++;
-            count = 0;
+    var hash1 = new Dictionary<string, int>();
+    foreach (var c in s) {
+        var key = c.ToString();
+        if (!hash1.TryAdd(key, 1)) {
+            hash1[key]++;
         }
-        
-        if (count >= 3)
-        {
-            group.AddRange(s[origin..head].ToString());
-            origin = 
+    }
+    
+    var hash2 = new Dictionary<string, int>();
+    foreach (var c in t) {
+        var key = c.ToString();
+        if (!hash2.TryAdd(key, 1)) {
+            hash2[key]++;
         }
-        
-        head = origin;
-        count = 0;
-        head++;
+    }
+    
+    foreach (var kvp in hash1) {
+        if (!hash2.TryGetValue(kvp.Key, out var count) || count != kvp.Value) {
+            return false;
+        }
     }
 
     return true;
 }
-
-var isAnagram = IsAnagram("racecar", "carrace");
-
-Console.WriteLine(isAnagram ? "true" : "false");
