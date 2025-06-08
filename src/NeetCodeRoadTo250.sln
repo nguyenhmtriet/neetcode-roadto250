@@ -6,6 +6,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arrays & Hashing", "Arrays 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidAnagram", "ValidAnagram\ValidAnagram.csproj", "{D613B119-33E6-4EE1-9B49-221025685F68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoIntegerSum", "TwoIntegerSum\TwoIntegerSum.csproj", "{F8AC572A-E88C-421D-AB78-DC5BBA8B33A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +22,14 @@ Global
 		{D613B119-33E6-4EE1-9B49-221025685F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D613B119-33E6-4EE1-9B49-221025685F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D613B119-33E6-4EE1-9B49-221025685F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8AC572A-E88C-421D-AB78-DC5BBA8B33A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8AC572A-E88C-421D-AB78-DC5BBA8B33A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8AC572A-E88C-421D-AB78-DC5BBA8B33A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8AC572A-E88C-421D-AB78-DC5BBA8B33A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4767658F-E6B6-4340-94FB-E30ADA3A9348} = {8C3E93F3-3882-4B7B-B863-2A3816F206E9}
 		{D613B119-33E6-4EE1-9B49-221025685F68} = {8C3E93F3-3882-4B7B-B863-2A3816F206E9}
+		{F8AC572A-E88C-421D-AB78-DC5BBA8B33A9} = {8C3E93F3-3882-4B7B-B863-2A3816F206E9}
 	EndGlobalSection
 EndGlobal
